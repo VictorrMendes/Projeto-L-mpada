@@ -4,22 +4,20 @@ const lamp = document.getElementById ( 'lamp' );
 
 
 function isLampBroken () {
-    return lamp.src.indexof ( 'quebrada' ) > -1
+    return lamp.src.indexOf ( 'quebrada' ) > -1
 }
 
 function lampOn () {
-   
-
+    if ( !isLampBroken () )  {
         lamp.src = './img/ligada.jpg';
-    
+    }
     
 }
 
 function lampOff () {
-    
-
+    if ( !isLampBroken () )  {
          lamp.src = './img/desligada.jpg';
-    
+    }
 }
 
 function lampBroken () {
